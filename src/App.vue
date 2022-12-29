@@ -1,3 +1,3 @@
 <script>
-console.log(`[App] `);
+console.log(`in App.vue`);
 </script>

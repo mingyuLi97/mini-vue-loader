@@ -1,6 +1,8 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const { VueLoaderPlugin } = require("vue-loader");
+// const { VueLoaderPlugin } = require("vue-loader");
+const { VueLoaderPlugin } = require("./vue-loader");
 const webpack = require("webpack");
+const path = require("path");
 
 /**
  * @type {import('webpack').Configuration}
@@ -13,7 +15,8 @@ module.exports = {
     rules: [
       {
         test: /\.vue$/,
-        loader: "vue-loader",
+        loader: path.resolve(__dirname, "vue-loader"),
+        // loader: "vue-loader",
       },
     ],
   },
